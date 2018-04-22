@@ -10,16 +10,58 @@
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
-        <form action="#">
-                <div>
-                
-                 <label>word one:</label><input type="text" readonly="readonly"><br>
-                
-                 <input type="button" value="Click here to get random words">
-                 <input type="reset" value="Clear">
-                
+        <header class="Header">
+                <div class="gameTitle"> 
+                        <div ="title">
+                                <h1 class="hangMan">
+                                        HANG-MAN
+                                </h1>
+                                <h4 class="theGame">
+                                        The game
+                                </h4>
+                        </div>
                 </div>
-                </form>
-    
+                <div class="scoreBoard">
+                        <div class="winAmount">
+                                <h3 class="wins">
+                                        Wins
+                                </h3>
+                                <div class="winNumber">
+                                </div>
+                        </div>
+                        <div class="loseAmount">
+                                <h3 class="losses">
+                                        Losses
+                                </h3>
+                                <div class="lossNumber">
+                                </div>
+                        </div>
+                        <div class="restartButton">
+                                <button class="restart">
+                                        Restart
+                                </button>
+                        </div>
+                </div>
+        </header>
+        <div class="gameBody">
+                <div class="difficultySelection">
+                        <button class="easyMode">Easy</button>
+                        <button class="mediumMode">Medium</button>
+                        <button class="hardMode">Hard</button>
+                        <button class="impossibleMode">Impossible</button>
+                </div>
+                <div class="mainContent">
+                        <div class="hangingMan">
+                        </div>
+                        <div class="missingLetters">
+                        </div>
+                </div>
+                <div class="gameTokens">
+                        <div class="remainingTries">
+                        </div>
+                        <div class="wrongLetters">
+                        </div>
+                </div>
+        </div>    
 </body>
 </html>

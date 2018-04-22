@@ -20,7 +20,7 @@ function init(){
     window.addEventListener('load',init,false):
     window.attachEvent('onload',init);
 //select random word
-
+ 
 //spell out the word
 
 //guess a letter
