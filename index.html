@@ -6,8 +6,11 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="assets/javascript/game.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
         <header class="Header">
@@ -45,7 +48,7 @@
         </header>
         <div class="gameBody">
                 <div class="difficultySelection">
-                        <button class="easyMode">Easy</button>
+                        <button class="easyMode" onclick="myFunction()">Easy</button>
                         <button class="mediumMode">Medium</button>
                         <button class="hardMode">Hard</button>
                         <button class="impossibleMode">Impossible</button>
@@ -61,7 +64,10 @@
                         </div>
                         <div class="wrongLetters">
                         </div>
+                        <div id="display"></div>
+                        <div id="buttons"></div>
+                        <button id="clear">clear</button>
                 </div>
-        </div>    
+        </div>   
 </body>
 </html>

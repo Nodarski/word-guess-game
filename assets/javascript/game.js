@@ -1,40 +1,46 @@
-//Word bank
-function init(){
+//Buttons on screen
+$(document).ready(function() {
+   
+    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+    
+    for (i = 0; i < letters.length; i++) {
+        var letterBtn = $("<button>");
+        letterBtn.addClass("letter-button letter letter-button-color");
+        letterBtn.attr("data-letter", letters[i]);
+        letterBtn.text(letters[i]);
+        $("#buttons").append(letterBtn);
+    }
+});
 
-    words0=['art','car','bus','earth','camera','phone','sun','light','number',];
- 
- 
-    df=document.forms[0];
-    df.reset();
- 
- df[1].onclick=function() {
- 
-    rnd0=Math.floor(Math.random()*words0.length);
- 
- 
-    df[0].value=words0[rnd0];
- 
-   }
-  }
-    window.addEventListener?
-    window.addEventListener('load',init,false):
-    window.attachEvent('onload',init);
-//select random word
- 
-//spell out the word
+$(".letter-button").on("click", function () {
+    var fridgeMagnet = $("<div>");
+    fridgeMagnet.addClass("letter fridge-color");
+    fridgeMagnet.text($(this).attr("data-letter"));
+    $("#display").append(fridgeMagnet);
+});
 
-//guess a letter
+var easy = ["Word","phrase","test"];
+var medium = ["woorrdd","medium","teesstt"];
+var stringToSplit = "hello world ";
+var str = "How are you doing today?";
+var res = str.split("");
 
-//check if letter is in the word
+var main = $("body");
+var btns = main.find(".easyMode");
 
-//if correct reveal the letter in the word
-//else minus one try and add the letter to the wrong box
+//click/split function
+function myFunction(){
+    var randomWord = easy[Math.floor(Math.random()*easy.length)];
+    var spelling = randomWord.split("");
+   
 
-//when game is over
-    //if win play good song
-    //if lose go to youtube, rickroll, new tab
-    //restart the game
-
-
+    for(i = 0; i < spelling.length; i++) {
+        var letterDsp = $("<div>");
+        letterDsp.addClass("hidden-block")
+        letterDsp.attr("data-letter", spelling[i]);
+        letterDsp.text(spelling[i]);
+        $(".missingLetters").append(letterDsp);
+    }
+};
 
 
